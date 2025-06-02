@@ -43,6 +43,6 @@ export async function GET(request) {
         success = true;
     }
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: success, result })
 
 }
