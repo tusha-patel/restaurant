@@ -15,7 +15,7 @@ export default function Home() {
 
   // for get the location
   const loadLocations = async () => {
-    let response = await fetch("http://localhost:3000/api/customer/locations");
+    let response = await fetch("https://restaurant-rosy-beta.vercel.app/api/customer/locations");
     response = await response.json();
     // console.log(response);
 
@@ -27,7 +27,7 @@ export default function Home() {
   // for get the restaurant
 
   const loadRestaurant = async (params) => {
-    let url = "http://localhost:3000/api/customer";
+    let url = "https://restaurant-rosy-beta.vercel.app/api/customer";
     if (params?.location) {
       url = url + "?location=" + params.location
     } else if (params?.restaurant) {
