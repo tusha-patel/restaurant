@@ -28,7 +28,7 @@ const DeliveryHeader = () => {
     return (
         <div className="header-wrapper" >
             <Link href={"/"} className="logo">
-                <Image height={100} width={150} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt="logo image" />
+                <Image height={70} width={100} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt="logo image" />
             </Link>
             <div className="">
                 <ul>
