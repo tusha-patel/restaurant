@@ -18,7 +18,7 @@ const DetailsPage = () => {
 
     const loadRestaurantDetails = async () => {
         const id = searchParams.get('id')
-        let response = await fetch(`http://localhost:3000/api/customer/${id}`);
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/customer/${id}`);
         response = await response.json();
         if (response.success) {
             setRestaurantDetails(response.details);

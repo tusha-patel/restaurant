@@ -22,7 +22,7 @@ const DeliveryDashboard = () => {
             return false
         }
 
-        let response = await fetch(`http://localhost:3000/api/deliverypartner/orders/${deliveryData?._id}`)
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/deliverypartner/orders/${deliveryData?._id}`)
         response = await response.json();
         if (response.success) {
             setMyOrder(response.result)
@@ -44,7 +44,7 @@ const DeliveryDashboard = () => {
         try {
             // console.log(newStatus);
             console.log(item.status);
-            let response = await fetch(`http://localhost:3000/api/order/${item.status}`, {
+            let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/order/${item.status}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

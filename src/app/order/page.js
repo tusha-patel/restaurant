@@ -36,7 +36,7 @@ const Order = () => {
         let foodItemIds = cart.map((item) => item._id).toString();
         // let deliveryBoy_id = "6815aafe2c1daa9d550c45b2";
 
-        let deliveryBoyResponse = await fetch(`http://localhost:3000/api/deliverypartner/${city}`)
+        let deliveryBoyResponse = await fetch(`https://restaurant-rosy-beta.vercel.app/api/deliverypartner/${city}`)
         deliveryBoyResponse = await deliveryBoyResponse.json();
         console.log(deliveryBoyResponse);
 
@@ -67,7 +67,7 @@ const Order = () => {
         }
         console.log(collection);
 
-        let response = await fetch("http://localhost:3000/api/order", {
+        let response = await fetch("https://restaurant-rosy-beta.vercel.app/api/order", {
             method: "POST",
             body: JSON.stringify(collection)
         });

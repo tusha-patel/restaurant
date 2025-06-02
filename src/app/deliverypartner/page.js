@@ -19,7 +19,7 @@ const DeliveryPartner = () => {
 
     const handleSignUp = async () => {
 
-        let response = await fetch("http://localhost:3000/api/deliverypartner/signup", {
+        let response = await fetch("https://restaurant-rosy-beta.vercel.app/api/deliverypartner/signup", {
             method: "POST",
             body: JSON.stringify({ name, mobile, password, city, address })
         });
@@ -38,7 +38,7 @@ const DeliveryPartner = () => {
     }
 
     const handleLogin = async () => {
-        let response = await fetch(`http://localhost:3000/api/deliverypartner/login`, {
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/deliverypartner/login`, {
             method: "POST",
             body: JSON.stringify({ mobile: loginMobile, password: loginPassword })
         });

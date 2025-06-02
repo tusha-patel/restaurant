@@ -17,7 +17,7 @@ const UserLogin = ({ redirect }) => {
         }
 
 
-        let response = await fetch("http://localhost:3000/api/user/login", {
+        let response = await fetch("https://restaurant-rosy-beta.vercel.app/api/user/login", {
             method: "POST",
             body: JSON.stringify({ email, password }),
         });

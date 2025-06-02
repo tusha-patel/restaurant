@@ -17,7 +17,7 @@ const EditFoodItems = () => {
 
 
     const handleLoadFoodItem = async () => {
-        let response = await fetch(`http://localhost:3000/api/restaurant/foods/edit/${id}`);
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/edit/${id}`);
         response = await response.json();
 
         if (response.success) {
@@ -41,7 +41,7 @@ const EditFoodItems = () => {
         } else {
             setError(false);
         }
-        let response = await fetch(`http://localhost:3000/api/restaurant/foods/edit/${id}`, {
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/edit/${id}`, {
             method: "PUT",
             body: JSON.stringify({ name, price, img_path: path, description })
         });

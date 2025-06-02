@@ -10,7 +10,7 @@ const Page = () => {
 
     const getMyOrders = async () => {
         const user = JSON.parse(localStorage.getItem("user"));
-        let response = await fetch(`http://localhost:3000/api/order?id=${user._id}`);
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/order?id=${user._id}`);
         response = await response.json();
 
 
