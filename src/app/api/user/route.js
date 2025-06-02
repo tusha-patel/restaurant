@@ -5,6 +5,11 @@ import { NextResponse } from "next/server";
 
 
 
+export async function GET() {
+    return NextResponse.json({ result: true })
+
+}
+
 
 
 export async function POST(request) {
