@@ -1,42 +1,400 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+*:focus {
+  outline: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+body {
+  margin: 0 auto;
+}
+
+
+/* login-sign up page */
+.input-wrapper {
+  padding: 10px 0px;
+  position: relative;
+}
+
+.input-field {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+}
+
+.button {
+  width: 300px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 80px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.button-login {
+  background-color: transparent;
+  color: rgb(26, 26, 194);
+  margin: 20px;
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-wrapper ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper ul li {
+  list-style: none;
+  padding: 10px 20px;
+}
+
+.header-wrapper ul li a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.header-wrapper ul button {
+  background-color: transparent;
+  border: none;
+  color: blueviolet;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 130px;
+}
+
+/* footer */
+.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+  background-color: white;
+}
+
+/* banner page  */
+.main-page-banner,
+.restaurant-page-banner {
+  background-image: url("https://a.storyblok.com/f/88809/1150x450/30a9c4f9a6/igevia_header_fastfood01_450.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 10px;
+  color: white;
+  border-bottom-width: 10px;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-image: url("../../public/waveloop.svg") 120 round
+}
+
+.main-page-banner h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.input-wrappers {
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: auto;
+  width: 70%;
+}
+
+.select-input {
+  height: 40px;
+  border: none;
+  width: 30%;
+  padding-left: 15px;
+}
+
+
+.search-input {
+  height: 40px;
+  border: none;
+  width: 65%;
+  border-left: 1px solid #ccc;
+  padding-left: 15px;
+}
+
+.input-wrappers {
+  position: relative;
+}
+
+/* home page */
+.location-list {
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 53px;
+  left: -1px;
+  padding: 0px;
+  max-width: 300px;
+  width: 100%;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.location-list li {
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+.location-list li:last-child {
+  border-bottom: none;
+}
+
+.restaurant-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px 30px;
+}
+
+.restaurant-wrapper {
+  background-color: orange;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restaurant-wrapper .heading-wrapper,
+.address-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.restaurant-wrapper .heading-wrapper {
+  margin-bottom: 20px;
+}
+
+.restaurant-page-banner h1 {
+  text-align: center;
+  font-size: 65px;
+  margin-top: 60px;
+}
+
+/* restaurant details page */
+.detail-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: orange;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-wrapper h4 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.food-item-wrapper {
+  margin: 50px 30px;
+}
+
+.food-item-wrapper .list-item {
+  padding: 20px;
+  color: orange;
+  font-weight: bold;
+  border-bottom: 1px solid orange;
+  display: flex;
+  text-transform: capitalize;
+  gap: 30px;
+}
+
+.food-item-wrapper .list-item img {
+  height: 130px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.list-info {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px 0;
+}
+
+.food-item-wrapper .list-item button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.description {
+  font-weight: normal;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+}
+
+
+
+.total-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 500px;
+  width: 100%;
+  /* justify-content: end; */
+  justify-self: end;
+  margin: 50px 30px;
+  border: 1px solid orange;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.order .total-wrapper {
+  justify-self: center;
+}
+
+.order h1 {
+  margin: 40px 30px 0px;
+}
+
+.order h2 {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+}
+
+.total-wrapper .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.total-wrapper button {
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-error {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  color: red;
+  font-size: 11px;
+}
+
+.profile .restaurant-list-container {
+  /* display: block; */
+  /* grid-template-columns: repeat(2 1fr); */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.profile .restaurant-wrapper {
+  padding-left: 30px;
+  /* width: 600px; */
+  /* margin: 20px auto; */
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.line-brake {
+  border-left: 1px solid black;
+  height: 100%;
+}
+
+.delivery h2 {
+  text-align: center;
+  padding: 30px;
+}
+
+select {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid #c06713;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+option {
+  background-color: rgb(245, 209, 144);
+  color: black;
+}
+
+option:hover {
+  background-color: black;
+}
+
+
+@media (max-width:900px) {
+  .restaurant-list-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width:600px) {
+  .restaurant-list-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .nav-items{
+    display: none;
   }
 }
