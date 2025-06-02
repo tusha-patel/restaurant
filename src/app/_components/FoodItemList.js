@@ -14,7 +14,7 @@ const FoodItemList = () => {
             alert("please first login with Restaurant id ")
             return false;
         } else {
-            let response = await fetch(`http://localhost:3000/api/restaurant/foods/${id?._id}`);
+            let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/${id?._id}`);
             response = await response.json();
             if (response.success) {
                 setFoodItems(response.result);
@@ -29,7 +29,7 @@ const FoodItemList = () => {
 
     const deleteFoodItem = async (id) => {
 
-        let response = await fetch(`http://localhost:3000/api/restaurant/foods/${id}`, {
+        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/${id}`, {
             method: "delete"
         });
         response = await response.json();
