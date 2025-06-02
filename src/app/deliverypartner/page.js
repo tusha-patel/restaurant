@@ -45,7 +45,6 @@ const DeliveryPartner = () => {
 
 
         response = await response.json();
-        console.log(response);
         if (response.success) {
             const { result } = response;
             delete result.password;

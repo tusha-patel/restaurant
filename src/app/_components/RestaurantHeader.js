@@ -13,8 +13,6 @@ const RestaurantHeader = () => {
 
     useEffect(() => {
         let data = localStorage.getItem("restaurantUser");
-        console.log(data);
-
         if (!data) {
             router.push("/restaurant");
         } else if (data && pathName === "/restaurant") {

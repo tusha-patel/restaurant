@@ -38,7 +38,6 @@ const UserSignUp = ({ redirect }) => {
         });
 
         response = await response.json();
-        console.log(response);
 
         if (response.success) {
             const { result } = response;

@@ -16,7 +16,6 @@ const DeliveryDashboard = () => {
 
     const getMyOrders = async () => {
         const deliveryData = JSON.parse(localStorage.getItem("delivery"));
-        console.log(deliveryData);
 
         if (!deliveryData) {
             return false
@@ -42,8 +41,6 @@ const DeliveryDashboard = () => {
 
     const handleStatusChange = async (item, newStatus) => {
         try {
-            // console.log(newStatus);
-            console.log(item.status);
             let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/order/${item.status}`, {
                 method: "PUT",
                 headers: {
@@ -53,13 +50,10 @@ const DeliveryDashboard = () => {
             });
 
             response = await response.json();
-            console.log(response);
             if (response.success) {
                 // Update only the selected order's status
                 setMyOrder(prevOrders =>
                     prevOrders.map(order => {
-                        console.log();
-
                         return (
                             order.data._id===item.data._id ? { ...order, status: newStatus } : order
                         )

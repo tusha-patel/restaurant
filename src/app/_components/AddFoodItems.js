@@ -26,8 +26,6 @@ const AddFoodItems = ({ setAddItem }) => {
         });
 
         response = await response.json();
-        console.log(response);
-
         if (response.success) {
             alert("Food item added");
             setAddItem(false)

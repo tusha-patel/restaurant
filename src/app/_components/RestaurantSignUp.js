@@ -15,7 +15,6 @@ const RestaurantSignUp = () => {
     const [passwordError, setPasswordError] = useState(false);
 
     const handleSignup = async () => {
-        console.log(password, c_password);
 
         if (password !== c_password) {
             setPasswordError(true)
@@ -36,7 +35,6 @@ const RestaurantSignUp = () => {
             body: JSON.stringify({ email, password, name, city, address, contact })
         });
         response = await response.json();
-        // console.log(response);
         if (response.success) {
             alert("User Register successfully ");
             const { result } = response;

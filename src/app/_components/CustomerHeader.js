@@ -21,7 +21,6 @@ const CustomerHeader = (props) => {
             setCartNumber(parsedCart.length);
         }
         const userStorage = JSON.parse(localStorage.getItem("user"));
-        console.log(userStorage);
         setUser(userStorage)
 
     }, []);
@@ -30,7 +29,6 @@ const CustomerHeader = (props) => {
 
     useEffect(() => {
         if (props.cartData) {
-            console.log(props);
             if (cartNumber) {
                 if (cartItem[0].restaurant_id != props.cartData.restaurant_id) {
                     localStorage.removeItem('cart');
@@ -59,7 +57,6 @@ const CustomerHeader = (props) => {
             let localCartItem = cartItem.filter((item) => {
                 return item._id !== props.removeCartData
             });
-            console.log(localCartItem);
 
 
             setCartItem(localCartItem);

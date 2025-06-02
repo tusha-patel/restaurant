@@ -6,7 +6,6 @@ import { NextResponse } from "next/server";
 
 export async function PUT(request, {params}) {
     const newStatus = params.id;
-    console.log(newStatus);
 
     const { status } = await request.json();
     let success = false;

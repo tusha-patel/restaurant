@@ -38,13 +38,10 @@ const Order = () => {
 
         let deliveryBoyResponse = await fetch(`https://restaurant-rosy-beta.vercel.app/api/deliverypartner/${city}`)
         deliveryBoyResponse = await deliveryBoyResponse.json();
-        console.log(deliveryBoyResponse);
 
         let deliveryBoyIds = deliveryBoyResponse.result.map((item) => item._id);
-        console.log(deliveryBoyIds);
 
         let deliveryBoy_id = deliveryBoyIds[Math.floor(Math.random() * deliveryBoyIds.length)];
-        console.log(deliveryBoy_id);
 
         if (!deliveryBoy_id) {
             alert("Delivery partner not avilable")
@@ -65,7 +62,6 @@ const Order = () => {
             status: "confirm",
             amount: total + DELIVERY_CHARGES + (total * TAX / 100),
         }
-        console.log(collection);
 
         let response = await fetch("https://restaurant-rosy-beta.vercel.app/api/order", {
             method: "POST",

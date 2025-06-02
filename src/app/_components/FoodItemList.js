@@ -9,15 +9,13 @@ const FoodItemList = () => {
 
     const loadFoodItem = async () => {
         const id = JSON.parse(localStorage.getItem("restaurantUser"));
-        console.log(id);
 
         if (!id) {
             alert("please first login with Restaurant id ")
             return false;
         } else {
-            let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/${id?._id}`);
+            let response = await fetch(`http://localhost:3000/api/restaurant/foods/${id?._id}`);
             response = await response.json();
-            console.log(response);
             if (response.success) {
                 setFoodItems(response.result);
             } else {
@@ -30,13 +28,11 @@ const FoodItemList = () => {
     }, []);
 
     const deleteFoodItem = async (id) => {
-        console.log(id);
 
-        let response = await fetch(`https://restaurant-rosy-beta.vercel.app/api/restaurant/foods/${id}`, {
+        let response = await fetch(`http://localhost:3000/api/restaurant/foods/${id}`, {
             method: "delete"
         });
         response = await response.json();
-        console.log(response);
 
         if (response) {
             alert("food item delete successful");

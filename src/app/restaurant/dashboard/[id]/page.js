@@ -47,8 +47,6 @@ const EditFoodItems = () => {
         });
 
         response = await response.json();
-        console.log(response);
-
         if (response.success) {
             alert("Food Item has been Updated");
             // setAddItem(false)

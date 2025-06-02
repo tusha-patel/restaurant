@@ -14,7 +14,6 @@ const CartPage = () => {
     useEffect(() => {
         try {
             let cart = JSON.parse(localStorage.getItem("cart")) || [];
-            console.log(cart);
 
             if (!cart || cart.length === 0) {
                 console.log("Cart is empty");

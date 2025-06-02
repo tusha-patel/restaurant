@@ -23,7 +23,6 @@ const UserLogin = ({ redirect }) => {
         });
 
         response = await response.json();
-        console.log(response);
 
         if (response.success) {
 

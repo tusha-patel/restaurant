@@ -7,8 +7,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
     const payload = await request.json();
-    console.log(payload);
-
     let success = false;
     await mongoose.connect(connectionStr );
 

@@ -8,7 +8,6 @@ import { NextResponse } from "next/server";
 export async function GET(request) {
     await mongoose.connect(connectionStr);
     let queryParams = request.nextUrl.searchParams;
-    // console.log(queryParams.get("location"));
 
     let filter;
 
