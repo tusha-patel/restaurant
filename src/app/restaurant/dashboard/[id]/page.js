@@ -57,7 +57,7 @@ const EditFoodItems = () => {
 
     return (
         <div className="edit-page" >
-            <h1>Update New Food Item</h1>
+            <h2>Update New Food Item</h2>
             <div className="form-wrapper">
                 <div className="input-wrapper">
                     <input type="text" className="input-field" placeholder="Enter Food Name"

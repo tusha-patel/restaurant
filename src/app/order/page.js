@@ -83,7 +83,7 @@ const Order = () => {
         <div className='order'>
             <CustomerHeader removeCartData={removeCartData} />
 
-            <h1>Order Details</h1>
+            <h2>Order Details</h2>
             <div className="total-wrapper">
                 <div className="">
                     <h2>user Details</h2>

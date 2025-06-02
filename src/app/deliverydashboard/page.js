@@ -70,7 +70,7 @@ const DeliveryDashboard = () => {
     return (
         <>
             <DeliveryHeader />
-            <h1>My order List</h1>
+            <h2>My order List</h2>
             <div className="" style={{ width: "400px", margin: "20px" }} >
                 {
                     myOrder.map((item, ind) => (

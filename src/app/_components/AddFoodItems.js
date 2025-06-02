@@ -35,7 +35,7 @@ const AddFoodItems = ({ setAddItem }) => {
 
     return (
         <div>
-            <h1>Add New Food Item</h1>
+            <h2>Add New Food Item</h2>
             <div className="form-wrapper">
                 <div className="input-wrapper">
                     <input type="text" className="input-field" placeholder="Enter Food Name"

@@ -54,7 +54,7 @@ const DetailsPage = () => {
         <div>
             <CustomerHeader cartData={cartData} removeCartData={removeCart} />
             <div className="restaurant-page-banner">
-                <h1> {decodeURI(name)}</h1>
+                <h2> {decodeURI(name)}</h2>
             </div>
 
             <div className='detail-wrapper'>
