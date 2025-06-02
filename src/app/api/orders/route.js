@@ -9,7 +9,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
     const payload = await request.json();
-    await mongoose.connect(connectionStr );
+    await mongoose.connect(connectionStr);
     let success = false;
 
     const orderObj = new orderSchema(payload);
@@ -25,7 +25,7 @@ export async function GET(request) {
     const userId = request.nextUrl.searchParams.get("id");
     console.log(userId);
 
-    await mongoose.connect(connectionStr );
+    await mongoose.connect(connectionStr);
     let success = false;
     let result = await orderSchema.find({ user_id: userId });
     if (result) {
