@@ -90,7 +90,8 @@ const CustomerHeader = (props) => {
     return (
         <div className="header-wrapper" >
             <Link href={"/"} className="logo">
-                <Image height={80} width={100} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt="logo image" />
+                <Image height={80} width={100} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt="logo image" priority
+                />
             </Link>
             <div className="nav-items  ">
                 <ul>

@@ -32,7 +32,7 @@ const RestaurantHeader = () => {
     return (
         <div className="header-wrapper" >
             <Link href={"/"} className="">
-                <Image height={100} width={150} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" alt="Logo image" />
+                <Image height={100} width={150} src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png" priority alt="Logo image" />
             </Link>
             <div className="">
                 <ul>

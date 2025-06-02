@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react'
 import CustomerHeader from '../_components/CustomerHeader';
 import { DELIVERY_CHARGES, TAX } from '../lib/constant';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 const CartPage = () => {
     const [cartStorage, setCartStorage] = useState([]);

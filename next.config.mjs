@@ -7,7 +7,10 @@ const nextConfig = {
             'lh3.googleusercontent.com',
             's.tmimgcdn.com'
         ],
-    }
+    },
+    experimental: {
+        legacyBrowsers: false, // disables support for IE11
+    },
 };
 
 export default nextConfig;
