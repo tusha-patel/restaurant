@@ -12,7 +12,7 @@ export async function GET(request, content) {
 
 
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     let filter = { city: { $regex: new RegExp(city, "i") } }
     const result = await deliveryPartnerSchema.find(filter);
     if (result) {

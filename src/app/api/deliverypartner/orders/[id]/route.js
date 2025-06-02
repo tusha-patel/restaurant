@@ -11,7 +11,7 @@ export async function GET(request, content) {
     const id = content.params.id
 
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     let result = await orderSchema.find({ deliveryBoy_id: id });
     if (result) {
         let restaurantData = await Promise.all(

@@ -6,14 +6,14 @@ import { restaurantSchema } from "@/app/lib/restaurantModel";
 
 
 export async function GET() {
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     const data = await restaurantSchema.find();
     console.log(data);
     return NextResponse.json({ result: data });
 }
 
 export async function POST(request) {
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     let payload = await request.json();
     let result;
     let success = false

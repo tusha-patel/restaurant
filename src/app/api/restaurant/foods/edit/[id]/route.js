@@ -9,7 +9,7 @@ import { NextResponse } from "next/server";
 export async function GET(request, content) {
     const id = await content.params.id;
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
 
     const result = await foodSchema.findOne({ _id: id });
     if (result) {
@@ -25,7 +25,7 @@ export async function PUT(request, content) {
     const id = await content.params.id;
     const { name, price, img_path, description } = await request.json();
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     const result = await foodSchema.findByIdAndUpdate(id, {
         name: name,
         price: price,

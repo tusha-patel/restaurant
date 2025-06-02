@@ -12,7 +12,7 @@ export async function POST(request) {
 
     let success = false;
 
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
     const user = new deliveryPartnerSchema(payload);
     const result = await user.save();
 

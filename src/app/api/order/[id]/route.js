@@ -10,7 +10,7 @@ export async function PUT(request, {params}) {
 
     const { status } = await request.json();
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
 
     let result = await orderSchema.findOneAndUpdate({ status: newStatus }, {
         status: status

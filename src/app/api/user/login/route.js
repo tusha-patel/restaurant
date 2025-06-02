@@ -10,7 +10,7 @@ export async function POST(request) {
     console.log(payload);
 
     let success = false;
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr );
 
     let result = await userSchema.findOne({ email: payload.email, password: payload.password })
     if (result) {

@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 
 
 export async function GET() {
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr);
 
     let result = await restaurantSchema.find();
 

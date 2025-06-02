@@ -10,7 +10,7 @@ export async function POST(request) {
     const payload = await request.json();
     let success = false;
 
-    await mongoose.connect(connectionStr, { useNewUrlParser: true });
+    await mongoose.connect(connectionStr);
     const result = await
         deliveryPartnerSchema.findOne({ mobile: payload.mobile, password: payload.password })
     if (result) {
